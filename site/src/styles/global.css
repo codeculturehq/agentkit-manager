@@ -35,8 +35,32 @@
     text-rendering: optimizeLegibility;
   }
 
+  /*
+   * Single, page-wide gradient wash. Painted relative to the viewport
+   * (background-attachment: fixed) so it never "breaks" at a section or
+   * above the footer — every inch of the page sits on the same fabric.
+   */
   body {
     font-feature-settings: "ss01", "cv11";
+    background-color: var(--color-ink-950);
+    background-image:
+      radial-gradient(
+        ellipse 80% 50% at 20% 0%,
+        rgba(255, 107, 53, 0.15),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 80% 10%,
+        rgba(99, 102, 241, 0.12),
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 50% 60% at 50% 100%,
+        rgba(168, 85, 247, 0.08),
+        transparent 60%
+      );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 
   ::selection {

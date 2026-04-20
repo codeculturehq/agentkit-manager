@@ -33,7 +33,7 @@ const features = [
 ];
 ---
 
-<section id="features" class="relative py-32 md:py-40 border-t border-hairline">
+<section id="features" class="relative">
   <div class="max-w-6xl mx-auto px-6">
     <div class="max-w-2xl">
       <div class="text-xs font-mono uppercase tracking-widest text-accent">Features</div>
@@ -46,9 +46,9 @@ const features = [
       </p>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ink-800/60 border border-hairline rounded-2xl overflow-hidden">
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
       {features.map(({ title, body, icon }) => (
-        <div class="group relative bg-ink-950 p-7 hover:bg-ink-900/60 transition-colors">
+        <div class="group relative rounded-xl border border-hairline bg-ink-950/80 backdrop-blur p-7 hover:bg-ink-900/60 transition-colors">
           <div class="flex items-center gap-3">
             <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-ink-900 border border-hairline text-accent group-hover:text-accent-soft transition-colors">
               <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" set:html={icon} />

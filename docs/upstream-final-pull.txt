@@ -1,0 +1,30 @@
+Final upstream pull from CCM (Claude Code Manager) — clean break point
+=========================================================================
+
+Pull executed: 2026-04-27
+Executed by: agentkit-manager fork maintainer (codeculturehq)
+
+Upstream repository: https://github.com/dustinlacewell/claude-config-manager
+Upstream branch:     master
+Upstream HEAD at pull time: 59b8725
+  Subject: 0.5.0: confirm before overwriting on cross-scope copy/move
+  Author:  Dustin Lacewell
+  Date:    2026-04-25T22:46:50-05:00
+
+Fork state at pull: 0 ahead, 2 behind upstream/master.
+Merge type: fast-forward (no conflicts, no diverging commits).
+
+Commits brought in by this final pull:
+  59b8725 0.5.0: confirm before overwriting on cross-scope copy/move
+  373a211 feat: confirm before overwriting on copy/move/create across scopes
+
+Action taken after this pull:
+  git remote remove upstream
+
+Future divergence policy:
+  - No further automatic rebase from upstream.
+  - If a specific upstream commit is wanted later, re-add the remote manually:
+      git remote add upstream https://github.com/dustinlacewell/claude-config-manager.git
+      git fetch upstream
+      git cherry-pick <sha>
+      git remote remove upstream
